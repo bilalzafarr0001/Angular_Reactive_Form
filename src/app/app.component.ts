@@ -13,6 +13,7 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  date = 'Date';
   title = 'reactive-forms';
   hobbiesData = ['Collecting Coins', 'WAtering Plants'];
   form = new FormGroup({

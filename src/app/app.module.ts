@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { DynamicTextInputComponent } from './dynamic-text-input/dynamic-text-input.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DynamicTextInputComponent],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

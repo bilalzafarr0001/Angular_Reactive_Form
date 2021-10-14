@@ -1,0 +1,40 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="submit()"
+  style="width: 400px; height: 500px; margin: auto auto"
+>
+  <div class="form-group">
+    <label for="name">Enter INput type to Create</label>
+    <input
+      formControlName="name"
+      id="name"
+      #input
+      type="text"
+      class="form-control"
+    />
+  </div>
+
+  <div formArrayName="inputs">
+    <label>Hobbies : </label>
+
+    <br />
+    <br />
+    <button type="button" class="btn btn-secondary" (click)="onAddInput(input)">
+      Add Hobbies
+    </button>
+    <div *ngFor="let formControl of inputs['controls']; let i = index">
+      <input class="form-control" type="{{ types[i] }}" [formControlName]="i" />
+      <div
+        *ngIf="
+          inputs['controls'][i].invalid &&
+          inputs['controls'][i].touched &&
+          inputs['controls'][i].errors?.required
+        "
+      >
+        <p style="color: red">This field is required</p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>

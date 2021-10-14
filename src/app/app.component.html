@@ -1,4 +1,4 @@
-<h1>Angular 12 Reactive Forms Validation Example</h1>
+<!-- <h1>Angular 12 Reactive Forms Validation Example</h1>
 
 <form
   [formGroup]="form"
@@ -80,7 +80,7 @@
       Add Hobbies
     </button>
     <div *ngFor="let formControl of hobbies['controls']; let i = index">
-      <input class="form-control" type="text" [formControlName]="i" />
+      <input class="form-control" type="{{ date }}" [formControlName]="i" />
       <div
         *ngIf="
           !hobbies['controls'][i].valid &&
@@ -96,4 +96,6 @@
   </div>
   <br />
   <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+</form> -->
+
+<app-dynamic-text-input></app-dynamic-text-input>
